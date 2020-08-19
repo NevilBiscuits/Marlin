@@ -490,9 +490,9 @@
 
 
   // Sidewinder X1 - Tunned by Todd
-  #define DEFAULT_Kp 14.06
-  #define DEFAULT_Ki 1.14
-  #define DEFAULT_Kd 43.47
+  #define DEFAULT_Kp 16.06
+  #define DEFAULT_Ki 1.16
+  #define DEFAULT_Kd 55.57
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -960,7 +960,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { 0, 28, -2.21 } // Offset Changed for Oceany Hemera Mount
+#define NOZZLE_TO_PROBE_OFFSET { 0, -39, 0 } // Offset Changed for Oceany Hemera Mount
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
