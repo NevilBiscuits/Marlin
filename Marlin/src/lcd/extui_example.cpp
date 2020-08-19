@@ -16,14 +16,14 @@
  *   GNU General Public License for more details.                           *
  *                                                                          *
  *   To view a copy of the GNU General Public License, go to the following  *
- *   location: <https://www.gnu.org/licenses/>.                              *
+ *   location: <http://www.gnu.org/licenses/>.                              *
  ****************************************************************************/
 
 #include "../inc/MarlinConfigPre.h"
 
 #if BOTH(EXTUI_EXAMPLE, EXTENSIBLE_UI)
 
-#include "extui/ui_api.h"
+#include "extensible_ui/ui_api.h"
 
 // To implement a new UI, complete the functions below and
 // read or update Marlin's state using the methods in the
@@ -89,24 +89,18 @@ namespace ExtUI {
     // whether successful or not.
   }
 
-  #if HAS_MESH
-    void onMeshUpdate(const int8_t xpos, const int8_t ypos, const float zval) {
-      // Called when any mesh points are updated
-    }
-
-    void onMeshUpdate(const int8_t xpos, const int8_t ypos, const ExtUI::probe_state_t state) {
-      // Called to indicate a special condition
-    }
-  #endif
+  void onMeshUpdate(const int8_t xpos, const int8_t ypos, const float zval) {
+    // Called when any mesh points are updated
+  }
 
   #if ENABLED(POWER_LOSS_RECOVERY)
-    void onPowerLossResume() {
+    void OnPowerLossResume() {
       // Called on resume from power-loss
     }
   #endif
 
   #if HAS_PID_HEATING
-    void onPidTuning(const result_t rst) {
+    void OnPidTuning(const result_t rst) {
       // Called for temperature PID tuning result
     }
   #endif
